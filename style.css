@@ -1,0 +1,842 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+@font-face{
+    font-family: Neue-montreal-Regular;
+    src: url(./Neue-montreal-free-demo_pangram-pangram_030418/NeueMontreal-Regular.otf);
+}
+@font-face{
+    font-family: Neue-montreal-Bold;
+    src: url(./Neue-montreal-free-demo_pangram-pangram_030418/NeueMontreal-Bold.otf);
+}
+@import url('https://fonts.googleapis.com/css2?family=Cardo:wght@700&display=swap');
+
+.navbar{
+    height: 130px;
+    width: 100%;
+    background-color: white;
+    position: sticky;
+}
+.navline{
+    height: 65px;
+    width: 100%;
+    border-bottom: 1px solid grey;
+    display: flex;
+    align-items: center;
+}
+.logo img{
+    height: 22.5px;
+    width: 82px;
+    margin-left: 25px;
+}
+.navline a{
+    text-decoration: none;
+    font-family: Neue-montreal-Regular;
+    color: #001E00;
+    font-weight: 500;
+    margin-left: 25px;
+    font-size: 14px;
+}
+.navline a:hover{
+    color: #3ead2f;
+}
+.navline ul li{
+    display: inline-block;
+    list-style: none;
+}
+.rightalign{
+    margin-left: 1170px;
+}
+.signupbtn{
+    width: 100px;
+    height: 40px;
+    background-color: #108a00;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    padding: 8px;
+    font-weight: 600;
+    font-family: Neue-montreal-Regular;
+    margin-left: 25px;
+}
+.signupbtn:hover{
+    background-color: #3ead2f;
+    cursor: pointer;
+}
+.navbottom{
+    height: 65px;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.navbottom a{
+    text-decoration: none;
+    font-family: Neue-montreal-Regular;
+    color: #001E00;
+    font-weight: 500;
+    font-size: 14px;
+    margin-left: 25px;
+}
+.navbottom a:hover{
+    color: #3ead2f;
+}
+.navbottom ul li{
+    display: inline-block;
+    list-style: none;
+}
+.header{
+    width: 1170px;
+    height: 448px;
+    /* border: 2px solid black; */
+    margin: 50px auto;
+}
+.header .heading{
+    font-family: 'Cardo', serif;
+    font-size: 40px;
+    letter-spacing: -2.8px;
+    line-height: 80px;
+    color: #14A800;
+}
+.header p{
+    font-family: Neue-montreal-Regular;
+    font-size: 25px;
+    font-weight: 500px;
+    color: #5E6D55;
+    letter-spacing: 0.048px;
+    line-height: 32px;
+    margin-top: 15px;
+}
+.startedbtns{
+    margin-top: 30px;
+    display: flex;
+    gap: 20px;
+}
+.startedbtns .getstarted{
+    width: 141.8px;
+    height: 40px;
+    background-color: #14A800;
+    color: white;
+    border-radius: 50px;
+    border: none;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Neue-montreal-Regular;
+    transition: all 0.5s;
+}
+.startedbtns .getstarted:hover{
+    background-color: #108a00;
+    cursor: pointer;
+}
+.startedbtns .lhth{
+    width: 166px;
+    height: 40px;
+    background: transparent;
+    color: #14A800;
+    border-radius: 50px;
+    border: 2px solid #14A800;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Neue-montreal-Regular;
+    transition: all 0.5s;
+}
+.startedbtns .lhth:hover{
+    background-color: #5f5f5e6c;
+    border: 2px solid black;
+    color: black;
+    cursor: pointer;
+}
+.trustedlogos p{
+    font-family: Neue-montreal-Regular;
+    font-size: 16px ;
+    color: #5f5f5e9d;
+    letter-spacing: 0.6px;
+    margin-top: 50px;
+}
+.trustedlogos img{
+    height: 40px;
+    margin-right: 20px;
+    margin-top: 10px;
+}
+.roundimg {
+    width: 470px;
+    height: 470px;
+    float: right;
+    margin-bottom: 80px;
+}
+.middleline{
+    width: 1170px;
+    height: 405px;
+    /* border: 2px solid black; */
+    margin: 80px auto;
+}
+.middleline h1{
+    font-family: 'Cardo', serif;
+    font-size: 42px;
+    font-weight: 900;
+    letter-spacing: -1.47px;
+    line-height: 57px;
+    color: #000c00;
+    margin-bottom: 10px;
+}
+.middleline{
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    color: #5E6D55;
+    font-family: Neue-montreal-Regular;
+}
+.middleline a{
+    font-family: Neue-montreal-Regular;
+    font-size: 16px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    color: #14A800;
+    text-decoration: none;
+}
+.tiles{
+        height: 134px;
+        width: 261px;
+        background-color: #e4ebe49d;
+        border-radius: 8px;
+        outline: none;
+        padding: 20px;
+        margin-right: 20px;
+        display: inline-block;
+        margin-top: 20px;
+        transition: all 0.5s;
+}
+.tiletype{
+    font-family: Neue-montreal-Regular;
+    font-size: 23px;
+    font-weight: 500;
+    color: #001E00;
+}
+.tilepara{
+    padding-top: 10px;
+}
+.tilepara img{
+    width: 12px;
+    height: 12px;
+}
+.tilepara span{
+    font-family: Neue-montreal-Regular;
+    font-size: 17px;
+    color: #5E6D55;
+}
+.tilepara .skill{
+    margin-left: 40px;  
+}
+.tiles:hover{
+    background-color: #5f5f5e49;
+    cursor: pointer;
+}
+.imgcontainer{
+        width: 1200px;
+        height: 616px;
+        /* border: 2px solid black; */
+        margin: 10px auto;
+        background-image: url(./images/asset\ 22.webp);
+        border-radius: 8px;
+        padding: 40px;
+}
+.imgcontainer p{
+    font-family: Neue-montreal-Regular;
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+}
+.imgcontainer h1{
+    font-size: 72px;
+    font-family: 'Cardo', serif;
+    color: #ffffff;
+    line-height: 62px;
+}
+.imgcontainer .imgcontp2{
+    font-family: Neue-montreal-Regular;
+    font-size: 18px;
+    font-weight: 500px;
+}
+.inimgboxes{
+    height: 148px;
+    width: 359px;
+    background-color: #14A800;
+    border-radius: 8px;
+    outline: none;
+    padding: 15px;
+    margin-right: 10px;
+    display: inline-block;
+    margin-top: 45px;
+    transition: all 0.5s;
+}
+.inimgboxes:hover{
+    background-color: #ffffff88;
+    cursor: pointer;
+}
+.inimgboxes h1{
+    font-family: Neue-montreal-Regular;
+    font-size: 32px;
+    line-height: 36px;
+}
+.inimgboxes p{
+    font-family: Neue-montreal-Regular;
+    font-size: 18px;
+    margin-top: 20px;
+}
+.inimgboxes sup{
+    font-size: 8px;
+}
+.inimgboxes a{
+    text-decoration: none;
+}
+.inimgboxes img{
+    background-color: #ffffff;
+    margin-left: 10px;
+}
+.container{
+    width: 1200px;
+    height: 634px;
+    /* border: 2px solid black; */
+    margin: 100px auto;
+    border-radius: 8px;
+    display: flex;
+}
+.imgcontainerone{
+    width: 780px;
+    height: 634px;
+    background-color: #F2F7F2;
+    display: block;
+    padding: 30px;
+    border-radius: 8px;
+}
+.pngimg{
+    width: 357px;
+    height: 694px;
+    position: absolute;
+    margin-left: 530px;
+}
+.pngimg img{
+    width: 100%;
+    height: 100%;
+}
+.imgcontainerone h1{
+    font-family: 'Cardo', serif;
+    font-size: 70px;
+    color: #001E00;
+    line-height: 72px;
+    margin-bottom: 30px;
+    margin-top: 50px;
+}
+.imgcpara{
+    display: flex;
+}
+.imgcpara img{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+.imgcpara .hding{
+    font-family: Neue-montreal-Regular;
+    font-size: 36px;
+    font-weight: 900;
+    color: #001E00;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.imgcparap{
+    font-family: Neue-montreal-Regular;
+    font-size: 16px;
+    color: #5E6D55;
+    margin-left: 50px;
+    margin-bottom: 30px;
+}
+.imgcontainertwo{
+    width: 391px;
+    height: 634px;
+    background-color: #14A800;
+    margin-left: auto;
+    border-radius: 8px;
+    padding: 255px 20px 20px 40px;
+}
+.imgcontainertwo h3{
+    font-family: Neue-montreal-Regular;
+    font-size: 36px;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+.imgcparatwo{
+    display: flex;
+}
+.imgcparatwo img{
+    width: 40px;
+    height: 40px;
+    color: #ffffff;
+}
+.imgcparatwo .hding{
+    font-family: Neue-montreal-Regular;
+    font-size: 36px;
+    font-weight: 900;
+    color: #ffffff;
+    margin-left: 20px;
+    margin-bottom: 10px;
+}
+.imgcparaptwo{
+    font-family: Neue-montreal-Regular;
+    font-size: 16px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-left: 60px;
+    margin-bottom: 20px;
+}
+.ladypiccont{
+        width: 1200px;
+        height: 683px;
+        /* border: 2px solid black; */
+        margin: 0 auto;
+        border-radius: 8px;
+        display: flex;
+}
+.ladypic{
+    height: 683px;
+    width: 600px;
+    background-image: url(./images/girlimg.jpg);
+    background-size: cover;
+    border-top-left-radius : 8px;
+    border-bottom-left-radius : 8px;
+    outline: none;
+}
+.filledbox{
+    height: 683px;
+    width: 600px;
+    /* border: 2px solid rgb(4, 66, 236); */
+    background-color: #224ec9; 
+    padding: 30px;
+    border-top-right-radius : 8px;
+    border-bottom-right-radius : 8px;
+}
+.filledbox p{
+    font-family: Neue-montreal-Regular;
+    font-size: 15px;
+    font-weight: 400;
+    color: #ffffff;
+}
+.filledbox .firstpf{
+    font-family: Neue-montreal-Regular;
+    font-size: 24px;
+    font-weight: 500;
+    color: #ffffff;
+}
+.filledbox h1{
+    font-size: 72px;
+    font-family: 'Cardo', serif;
+    color: #ffffff;
+    line-height: 62px;
+    margin-top: 30px;
+}
+.filledbox .imgcontp3{
+    font-family: Neue-montreal-Regular;
+    font-size: 18px;
+    font-weight: 500px;
+}
+.line1{
+    border-top: 1px solid white;
+    margin-top: 200px;
+}
+.imgpara1{
+    display: flex;
+}
+.imgpara1 p{
+    font-weight: 100;
+    font-size: 18px;
+    margin-right: 40px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.fo{
+    width: 194px;
+    height: 40px;
+    background-color: #F2F7F2;
+    color: #224ec9;
+    border-radius: 50px;
+    border: 2px solid #224ec9;
+    padding: 8px;
+    font-size: 15px;
+    font-weight: 500;
+    font-family: Neue-montreal-Regular;
+    margin: 20px 0;
+}
+.fo:hover{
+    cursor: pointer;
+}
+.heading2{
+    height: 144px;
+    width: 1170px;
+    margin: 80px auto 10px auto;
+}
+.heading2 h1{
+    font-family: 'Cardo', serif;
+    font-size: 72px;
+    letter-spacing: -2.8px;
+    line-height: 72px;
+    color: #001E00;
+    display: block;
+    display: flex;
+}
+.bottomcard{
+    width: 1170px;
+    height: 450px;
+    margin: 20px auto;
+    /* border: 2px solid black; */
+    display: flex;
+    gap: 40px;
+}
+.typecard1{
+    height: 450px;
+    width: 540px;
+    background-color: #13544E;
+    border-radius: 8px;
+    padding: 20px;
+}
+.typecard1 img{
+    height: 56px;
+    width: 199px;
+}
+.typecard1 .typecard1h3{
+    font-family: Neue-montreal-Regular;
+    font-size: 26px;
+    font-weight: 500px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+.typecard1 p{
+    font-family: Neue-montreal-Regular;
+    font-size: 16px;
+    font-weight: 400;
+    color: #D5E0D5;
+    margin-top: 10px;
+}
+.typecard1 .downp2{
+    font-family: Neue-montreal-Regular;
+    font-size: 16px;
+    font-weight: 400;
+    color: #D5E0D5;
+    margin-top: 50px;
+}
+.line4{
+    border-top: 1px solid white;
+    margin-top: 10px;
+
+}
+.typecardtables3{
+    display: flex;
+}
+.typecardtables4{
+    margin-left: 50px;
+}
+.t2 h4{
+    font-family: Neue-montreal-Regular;
+    font-size: 26px;
+    color: #ffffff;
+    margin-top: 10px;
+}
+.typecard2{
+    height: 450px;
+    width: 540px;
+    background-color: #BC511B;
+    border-radius: 8px;
+    padding: 20px;
+}
+.typecard2 img{
+    height: 41px;
+    width: 189px;
+}
+.typecard2 .typecard2h3{
+    font-family: Neue-montreal-Regular;
+    font-size: 26px;
+    font-weight: 500px;
+    color: #ffffff;
+    margin-top: 20px;
+}
+.typecard2 p{
+    font-family: Neue-montreal-Regular;
+    font-size: 16px;
+    font-weight: 400;
+    color: #D5E0D5;
+    margin-top: 10px;
+}
+.typecard2 .downp{
+    font-family: Neue-montreal-Regular;
+    font-size: 16px;
+    font-weight: 400;
+    color: #D5E0D5;
+    margin-top: 60px;
+}
+.line3{
+    border-top: 1px solid white;
+    margin-top: 10px;
+}
+.typecardtables{
+    display: flex;
+}
+.typecardtables2{
+    margin-left: 50px;
+}
+.t1 h4{
+    font-family: Neue-montreal-Regular;
+    font-size: 26px;
+    color: #ffffff;
+    margin-top: 10px;
+}
+.t1 p{
+    font-weight: 100;
+    font-size: 18px;
+    margin-right: 40px;
+    font-weight: 500;
+    margin-top: 10px;
+}
+.supportukraine{
+    width: 1170px;
+    height: 202px;
+    background-color: #F2F7F2;
+    margin: 100px auto;
+    border-radius: 8px;
+    padding: 20px;
+}
+.supportukraine h1{
+    font-family: 'Cardo', serif;
+    font-size: 38px;
+    color: #001E00;
+    margin-bottom: 8px;
+}
+.supportukraine p{
+    font-family: Neue-montreal-Regular;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.6px;
+    color: #5E6D55;
+    margin-bottom: 27px;
+}
+.supportukraine .learnbtn{
+    width: 142px;
+    height: 40px;
+    background-color: #ffffff;
+    color: #108a00;
+    border-radius: 160px;
+    border: 2px solid #108a00;
+    font-weight: 600;
+    font-family: Neue-montreal-Regular;
+    font-size: 15px;
+}
+.supportukraine .learnbtn:hover{
+    background-color: #F2F7F2;
+    cursor: pointer;
+}
+.outsidetable{
+    width: 1300px;
+    height: 788px;
+    /* border: 2px solid black; */
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-around;
+}
+.outsidetable button{
+    font-family: Neue-montreal-Regular;
+    font-size: 40px;
+    font-weight: 700;
+    color: #001e002f;
+    background-color: #ffffff;
+    display: block;
+    border: none;
+    margin-bottom: 15px;
+}
+.outsidetable sup{
+    font-size: 10px;
+    font-weight: bold;
+}
+.outsidetable .colouredbtn{
+    color: #14A800;
+}
+.outsidetable button:hover{
+    color: #14A800;
+}
+.outsidetable .btns{
+    display: block;
+}
+.outsidetable .btns a{
+    text-decoration: none;
+}
+.list1 a{
+    text-decoration: none;
+    color: #5E6D55;
+    font-weight: 500;
+}
+.list1 ul li{
+    font-family: Neue-montreal-Regular;
+    font-size: 24px;
+    list-style: none;
+    margin-bottom: 20px;
+}
+.list1 a:hover{
+    color: #14A800;
+}
+.list2 a{
+    text-decoration: none;
+    color: #5E6D55;
+    font-weight: 500;
+}
+.list2 ul li{
+    font-family: Neue-montreal-Regular;
+    font-size: 24px;
+    list-style: none;
+    margin-bottom: 20px;
+}
+.list2 a:hover{
+    color: #14A800;
+}
+.footer{
+    width: 1535px;
+    height: 669px;
+    background-color: #001E00;
+    border-radius: 8px;
+    margin: 24px auto;
+    padding: 96px;
+}
+.tablefoot{
+    display: flex;
+    justify-content: space-between;
+}
+.tables{
+    display: block;
+}
+.table1 a{
+    font-family: Neue-montreal-Regular;
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.table1 ul{
+    list-style: none;
+}
+.table1 ul li{
+    margin-bottom: 16px;
+}
+.table1 .lightcolor{
+    color: #d5e0d5a8;
+    font-family: Neue-montreal-Regular;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.tablestwo{
+    display: block;
+}
+.table2 a{
+    font-family: Neue-montreal-Regular;
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.table2 ul{
+    list-style: none;
+}
+.table2 ul li{
+    margin-bottom: 16px;
+}
+.table2 .lightcolor{
+    color: #d5e0d5a8;
+    font-family: Neue-montreal-Regular;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+
+.tablesthree{
+    display: block;
+}
+.table3 a{
+    font-family: Neue-montreal-Regular;
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.table3 ul{
+    list-style: none;
+}
+.table3 ul li{
+    margin-bottom: 16px;
+}
+.table3 .lightcolor{
+    color: #d5e0d5a8;
+    font-family: Neue-montreal-Regular;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+
+.tablesfour{
+    display: block;
+}
+.table4 a{
+    font-family: Neue-montreal-Regular;
+    font-size: 14px;
+    text-decoration: none;
+    color: #ffffff;
+}
+.table4 ul{
+    list-style: none;
+}
+.table4 ul li{
+    margin-bottom: 16px;
+}
+.table4 .lightcolor{
+    color: #d5e0d5a8;
+    font-family: Neue-montreal-Regular;
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+.followbar{
+    display: flex;
+    gap: 10px;
+    margin-top: 50px;
+}
+.followbar p{
+    font-family: Neue-montreal-Regular;
+    font-size: 14px;
+    font-weight: 700;
+    color: #ffffff;
+    margin-top: 10px;
+}
+.followbar a{
+    border: 1px solid white;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.5s;
+}
+.followbar a:hover{
+    background-color: #9AAA97;
+}
+.followbar img{
+    width: 13.99px;
+    height: 13.99px;
+}
+.line5{
+    border-top: 1px solid white;
+    margin: 20px 0;
+}
+.lastp p{
+    font-family: Neue-montreal-Regular;
+    font-size: 14px;
+    color: #ffffff;
+    margin-right: 24px;
+    display: inline;
+}
+.lastp a{
+    text-decoration: none;
+}
